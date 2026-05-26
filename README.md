@@ -32,6 +32,21 @@ Pixel_Survivor는 다수의 적을 상대하며 경험치를 획득하고, 레�
 - Object Pooling을 통한 성능 최적화
 - PC / Android 멀티 플랫폼 대응
 
+## Source Links
+
+> GitHub에서 폴더/파일명이 다를 경우 링크가 이동하지 않을 수 있습니다. Unity 프로젝트 구조 기준으로 주요 구현 위치를 연결했습니다.
+
+| 구현 영역 | 주요 스크립트 |
+|---|---|
+| 캐릭터 공통 구조 | [Character.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Character.cs), [CharacterData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=CharacterData.cs) |
+| 플레이어 / 적 | [Player.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Player.cs), [Enemy.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Enemy.cs) |
+| 플레이어 이동 | [PlayerMove.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=PlayerMove.cs) |
+| 무기 시스템 | [Weapon.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Weapon.cs), [WeaponData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=WeaponData.cs), [WeaponSpawner.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=WeaponSpawner.cs) |
+| 인벤토리 / 성장 관리 | [Inventory.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Inventory.cs), [Level.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Level.cs) |
+| Object Pooling | [ObjectPooling.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=ObjectPooling.cs) |
+| 아이템 / 악세서리 데이터 | [ItemData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=ItemData.cs), [AccessoryData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=AccessoryData.cs) |
+| 전체 C# 스크립트 검색 | [Repository Code Search](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?l=C%23) |
+
 ## Core Features
 
 ### 1. OOP 기반 캐릭터 시스템
@@ -44,6 +59,12 @@ Character
 ├── Player
 └── Enemy
 ```
+
+관련 코드:
+- [Character.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Character.cs)
+- [CharacterData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=CharacterData.cs)
+- [Player.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Player.cs)
+- [Enemy.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Enemy.cs)
 
 주요 설계 특징:
 
@@ -62,6 +83,11 @@ WeaponData
     └── WeaponSpawner
 ```
 
+관련 코드:
+- [Weapon.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Weapon.cs)
+- [WeaponData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=WeaponData.cs)
+- [WeaponSpawner.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=WeaponSpawner.cs)
+
 주요 설계 특징:
 
 - 무기 타입별 데이터 분리
@@ -79,6 +105,11 @@ Inventory Dictionary
 Key   : Item ID
 Value : ItemData
 ```
+
+관련 코드:
+- [Inventory.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Inventory.cs)
+- [Level.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=Level.cs)
+- [ItemData.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=ItemData.cs)
 
 구현 요소:
 
@@ -108,6 +139,10 @@ Unity에서 GameObject를 반복 생성/삭제하면 메모리 할당과 해제�
 - 사용이 끝난 객체는 비활성화 후 Pool에 반환
 - 재사용 가능한 적, 투사체, 아이템 오브젝트를 Pool 단위로 관리
 - ScriptableObject를 활용하여 데이터와 런타임 로직 분리
+
+관련 코드:
+- [ObjectPooling.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=ObjectPooling.cs)
+- [WeaponSpawner.cs](https://github.com/beeseo147/Pixel_VampireSurvivor_Like/search?q=WeaponSpawner.cs)
 
 #### Result
 
